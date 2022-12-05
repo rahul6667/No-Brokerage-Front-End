@@ -1,0 +1,59 @@
+<section >
+    <div class="container  h-10 width">
+      <div class="row d-flex justify-content-center align-items-center h-50">
+        <div class="col">
+          <!-- <div class="card card-registration my-4"> -->
+            <div class="row g-0">
+              <!-- <div class="col-xl-3 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem;height: 400px;width:500px; border-bottom-left-radius: .25rem;" />
+              </div> -->
+              <div class="col-xl-4">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase text-center"><b>Login Form</b></h3>
+  
+                  <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                      <label for="UserName">UserName</label>
+                      <input
+                      [(ngModel)]="credentials.username"
+                      name="Username"
+                      required
+                      type="text" class="form-control" id="UserNameId" aria-describedby="UserNameHelp" placeholder="UserName">
+                      <small id="UserName" class="form-text text-muted">We'll never share your UserName with anyone else.</small>
+                    </div><br>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input
+                      [(ngModel)]="credentials.password"
+                      required
+                      name="Password"
+                      type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div *ngIf="userpassword">
+                      <h3 style="color:red;">Invalid UserName Or Password..!!</h3>
+                    
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+
+                    <button type="reset" style="margin-left: 10px;" class="btn btn-success">Reset</button>
+
+                    <button style="margin-left: 20px;" type="button"  class="btn btn-warning" routerLink="/registration">Register</button>
+                    
+    
+                
+                </form>
+  
+            <!-- <p>{{credentials | json }}</p> -->
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+
+

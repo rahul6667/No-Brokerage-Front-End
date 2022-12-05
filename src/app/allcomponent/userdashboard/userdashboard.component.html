@@ -1,0 +1,133 @@
+
+
+
+
+
+<div class="container mt-5" >
+    <div class="card p-2">
+    <div class="row">
+        <div class="col-6">
+    
+           
+    
+    <form>
+     
+    
+    
+           <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Choose city</mat-label>
+            <mat-select 
+            [(ngModel)]="selectedValue"
+            name="city"
+            required
+            placeholder="Your city">
+              <mat-option *ngFor="let getcity of cities" [value]="getcity.cityName">
+                {{getcity.cityName}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>  
+        
+        </form>
+        </div>
+     
+    </div>
+    
+    <br>
+    </div>
+    <div align="end">
+    
+    </div><br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="search-container my-4">
+
+    <input (keyup)="search($event)" id="search-input" type="text" class="form-control" placeholder="search your location" >
+    
+<div class="search-result">
+
+sdfgdf
+</div>
+
+    </div>
+
+<mat-grid-list cols="4" rowHeight="3:5" gutterSize="10">
+    <mat-grid-tile *ngFor="let p of alldata">
+        <div class="row p-2">
+            <div class="image-container">
+                <img [src]="p.propertyImage[0].url" alt="" class="up-image">
+           
+            </div>
+            <div style="margin-top: 50px;">
+            <P><b>NAME:{{p.propertyName}}</b></P>
+            <P>CITY :{{p.city}}</P>
+            <P>LOCATION :{{p.location}}</P>
+            <P> RENT :{{p.pricerange}}</P>
+
+        </div>
+            <button type="button" mat-raised-button color="warn" (click)="showPropDetails(p.propertyId)">View Details</button>   
+       
+
+        </div>
+ 
+            
+        
+    </mat-grid-tile>
+
+  </mat-grid-list>

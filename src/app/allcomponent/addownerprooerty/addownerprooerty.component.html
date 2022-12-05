@@ -1,0 +1,254 @@
+
+
+<div class="container mt-5" >
+<div class="card p-2">
+<div class="row">
+    <div class="col-6">
+
+       
+
+<form #dtaform="ngForm" (ngSubmit)="adddatafunction(dtaform)">
+       <!-- <mat-form-field appearance="outline" class="w-100">
+        <mat-label ><b>city</b></mat-label>
+        <input
+        [(ngModel)]="sendingdata.city"
+        name="city"
+        required
+        matInput placeholder="City">
+       </mat-form-field>  -->
+
+
+       <!-- <mat-form-field appearance="outline" class="w-100">
+       <mat-select [(ngModel)]="sendingdata.city" name="city" placeholder="Select your city">
+        <mat-option *ngFor="let ct of cities" [value]="ct.value">
+          {{ct.cityName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>  -->
+
+    
+
+
+
+    <mat-form-field appearance="outline" class="w-100">
+     <mat-label>Property-Name</mat-label>
+     <input
+     [(ngModel)]="sendingdata.propertyName"
+     name="propertyName"
+     required
+     matInput placeholder="propertyName">
+    </mat-form-field> 
+
+
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Choose city</mat-label>
+        <mat-select 
+        [(ngModel)]="sendingdata.city"
+        name="city"
+        required
+        placeholder="Your city">
+          <mat-option *ngFor="let getcity of cities" [value]="getcity.cityName">
+            {{getcity.cityName}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>  
+    
+
+
+
+
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>location</mat-label>
+        <input
+        [(ngModel)]="sendingdata.location"
+        name="location"
+        required
+        matInput placeholder="Location">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>address</mat-label>
+        <input
+        [(ngModel)]="sendingdata.address"
+        name="address"
+        required
+        matInput placeholder="Address">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Type of BHK</mat-label>
+        <input
+        [(ngModel)]="sendingdata.bhk"
+        name="bhk"
+        required
+        matInput placeholder="Type of BHK">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Type of Home</mat-label>
+        <input 
+    
+        [(ngModel)]="sendingdata.typeRoom"
+        name="typeRoom"
+        required
+        
+        matInput placeholder="Type of Home">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Price range </mat-label>
+        <input
+    
+        [(ngModel)]="sendingdata.pricerange"
+        name="pricerange"
+        required
+        
+        matInput placeholder="Price range">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Home availability</mat-label>
+        <input 
+       
+        [(ngModel)]="sendingdata.availability"
+        name="availability"
+        required
+
+        matInput placeholder="Home availability">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Facility</mat-label>
+        <input 
+        
+        [(ngModel)]="sendingdata.facility"
+        name="facility"
+        required
+        matInput placeholder="Facility">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Near By Location</mat-label>
+        <input
+    
+        [(ngModel)]="sendingdata.nearLocation"
+        name="nearLocation"
+        required
+        
+        matInput placeholder="Near By Location">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Type for Person</mat-label>
+        <input 
+    
+        [(ngModel)]="sendingdata.typeFamily"
+        name="typeFamily"
+        required
+        
+        matInput placeholder="Family-Couple-freasher">
+       </mat-form-field> 
+
+       <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Parking</mat-label>
+        <input 
+        [(ngModel)]="sendingdata.parking"
+        name="parking"
+        required
+        matInput placeholder="Parking">
+       </mat-form-field>
+       <div align="end">
+
+        <button mat-stroked-button color="primary" style="margin-right: 3px;">Clear</button>
+      <button type="submit" mat-stroked-button color="primary">Add Product</button>
+
+      
+       </div> 
+    </form>
+    </div>
+    <div class="col-6">
+IMAGE AREA<br><br>
+
+<div class="col-12 ">
+
+    
+    <div><input type="file" multiple value="select" #selecteFile (change)="onFileSelected($event)">
+    </div>
+
+
+
+<div class="mt-5">
+<div class="row">
+    <mat-grid-list cols="4" rowHeight="1:1">
+<mat-grid-tile *ngFor="let file of sendingdata.propertyImage; let i=index"> 
+<div style="position:relative">
+    <span class="btn-remove-image" (click)="removeImage(i)">x</span>
+ <img [src]="file.url" width="100px" height="100px">
+ 
+</div>
+</mat-grid-tile>
+
+    </mat-grid-list>
+</div>
+
+</div>
+
+</div>
+</div>
+
+    
+</div>
+<br>
+
+<button  mat-raised-button  type="button" class="btn btnclr"routerLink="/dashboard">Go Back</button>
+
+<br>
+</div>
+<div align="end">
+
+</div><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="create-account">
+    <h2>Create Account</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <form [FormGroup]="createAccountForm">
+          <div class="form-group">
+            <select formControlName="country" class="form-control">
+              <option value="">Select country...</option>
+              <option *ngFor="let country of countries" [value]="country.id">{{country.country_name}}</option>
+            </select>
+          </div>
+         
+        
+        </form>
+      </div>
+    </div>
+  </div>
+ -->
+
+
+
+
+
+
+            

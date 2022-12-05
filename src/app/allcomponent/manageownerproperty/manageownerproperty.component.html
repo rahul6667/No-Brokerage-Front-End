@@ -1,0 +1,64 @@
+<table   class="table table-striped ">
+    <thead>
+      <tr class="tbc fs">
+
+        <th class="clr" scope="col">ID</th>
+        <th class="clr" scope="col">NAME</th>
+        <th class="clr" scope="col">CITY</th>
+        <th class="clr" scope="col">LOCATION</th>
+        <th class="clr" scope="col">ADDRESS</th>
+
+        <th class="clr" scope="col">PRICE</th>
+        <th class="clr" scope="col">BHK</th>
+        <th class="clr" scope="col">AVAILABILITY</th>
+
+        <th class="clr" scope="col">FACILITY</th>
+        <th class="clr" scope="col">LANDMARK</th>
+        <th class="clr" scope="col">CATEGORY</th>
+        <th class="clr" scope="col">PARKING</th>
+        <!-- <th class="clr" scope="col">images</th> -->
+        <th class="clr" scope="col">images</th>
+        <th class="clr" scope="col">edit</th>
+        <th class="clr" scope="col">delete</th>
+      </tr>
+    </thead>
+    <tbody class="fs">
+      <tr *ngFor="let item of alldata">
+
+
+        <td>{{item.propertyId}}</td>
+        <td>{{item.propertyName}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.location}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.pricerange}}</td>
+        <td>{{item.bhk}}</td>
+        <td>{{item.typeRoom}}</td>
+        <td>{{item.availability}}</td>
+        <td>{{item.nearLocation}}</td>
+        <td>{{item.typeFamily}}</td>
+        <td>{{item.parking}}</td>
+        
+        
+
+
+        
+        <td> <button mat-icon-button (click)="showimages(item)">
+            <mat-icon>images</mat-icon>
+          </button> </td>
+          <td> <button mat-icon-button (click)="editdata(item.propertyId)">
+            <mat-icon>edit</mat-icon>
+          </button> </td>
+        <td> <button mat-icon-button  (click)="deleteProperty(item.propertyId)">
+            <mat-icon>delete</mat-icon>
+          </button> </td>
+        
+      </tr>
+    
+      
+      
+      
+     
+      
+    </tbody>
+  </table>

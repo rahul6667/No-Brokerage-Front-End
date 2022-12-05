@@ -1,0 +1,20 @@
+.pro-info{
+    font-size: medium;
+
+}
+
+.image-container{
+    height: 250px;
+    position: relative;
+}
+
+.pzoom{
+max-width: 90%;
+max-height: 90%;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}

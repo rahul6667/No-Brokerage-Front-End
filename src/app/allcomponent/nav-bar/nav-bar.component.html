@@ -1,0 +1,73 @@
+<!-- <mat-toolbar color="primary">
+<span><a mat-icon-button routerLink="/">Login Brokrage</a></span>
+
+
+<span class="example-spacer"> </span>
+<a style="color: white;" routerLink="/login">Login</a>
+
+</mat-toolbar> -->
+<html>
+  <head></head>
+  <body>
+
+
+    
+<div class="bdy ">
+
+    <nav  class="navbar navbar-expand-sm  navbar-dark navtext gb">
+      
+<div class="icon">
+  <h2 class="logo">
+YASH
+  </h2>
+</div>
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">HOME</a>
+        </li>
+       
+        <li  class="nav-item" >
+          <a   *ngIf="!loggedIn" class="nav-link" routerLink="/login">Login / Registration</a>
+         
+        </li>
+
+        <li  class="nav-item" >
+          <a *ngIf="loggedIn" class="nav-link" >User</a>
+          
+        </li>
+
+        <li  class="nav-item" >
+          <a  *ngIf="loggedIn" class="nav-link"  (click)="logoutUser()" >Logout</a>
+         
+        </li>
+
+
+      </ul>
+
+    
+    </div>
+
+    <!-- <div> <ul class="navbar-nav me-auto">
+            
+      <li class="nav-item dropwown">
+        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">ALL LOGIN</a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="">admin</a></li>
+          <li><a class="dropdown-item" href="">owner</a></li>
+          <li><a class="dropdown-item" href="">user</a></li>
+      
+      
+        </ul>
+        
+      </li>
+            </ul></div> -->
+    
+  </nav>
+  </div>
+
+  
+  
+  </body>
+</html>
+

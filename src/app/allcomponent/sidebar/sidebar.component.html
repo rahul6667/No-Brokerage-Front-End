@@ -1,0 +1,63 @@
+
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened> <nav id="sidebarMenu" >
+            <div class=" bc sideh" >
+              <div class="list-group list-group-flush mx-4 mt-2 text">
+              
+              
+                <a  class="list-group-item py-2 bc org">
+                  <button (click)="profile()" class="list-group-item py-2 bc org"> Profile Registration </button>
+                </a>
+
+                  
+
+        <button (click)="toogleTag()" class="list-group-item py-2 bc org"> Add Properties </button>
+
+                <a  class="list-group-item py-2 bc org">
+                 
+        <button (click)="manageTag()" class="list-group-item py-2 bc org"> Manage Properties </button>
+
+                </a>
+               
+               
+                
+              </div>
+            </div>
+          </nav>
+</mat-drawer>
+
+        <mat-drawer-content>
+
+
+<div *ngIf="showMe">
+   
+      <app-addownerprooerty></app-addownerprooerty>
+   
+</div>
+
+
+<div *ngIf="showManage">
+  
+<app-manageownerproperty> </app-manageownerproperty>
+
+</div>
+<div *ngIf="showimage">
+<div>
+  <img src="/assets/forhome.jpg" style="width: 1300px;height: 400px;">
+ 
+</div>
+<div class="card" style="width: 81rem; font-size: medium;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">You may Add content</li>
+    <li class="list-group-item">You may Modify profile</li>
+    <li class="list-group-item">You may Manage Data</li>
+  </ul>
+</div>
+</div>
+        </mat-drawer-content>
+      </mat-drawer-container>
+
+   
+  
+    
+   

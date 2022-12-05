@@ -1,0 +1,17 @@
+
+.example-container {
+  width: auto;
+  height: 600px;
+  margin: 10px;
+
+  border: 1px solid rgb(124, 106, 97);
+}
+
+.btn{
+  border-radius: 50%;
+}
+
+.sideh{
+  height: 600px;
+}
+

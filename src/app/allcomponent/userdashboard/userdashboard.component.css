@@ -1,0 +1,39 @@
+mat-grid-tile{
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.up-image{
+    max-width: 120%;
+    max-height: 120%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.image-container{
+    position: relative;
+    height: 100px;
+
+}
+
+
+.search-container{
+position: relative; 
+}
+
+.search-result{
+    position: absolute;
+    background: white;
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.ms{
+    width: 200px;
+    margin-top: 50px;
+    
+}
